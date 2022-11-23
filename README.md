@@ -8,10 +8,10 @@ Riya Shah
 
 ## Overview of project
 I will identify differentially expressed genes for Liver and Intraheptic Bile Duct Cancers. My analysis will compare the vital status of those who received treatment or therpay and those who did not, while grouping for age - below 50 and above 50. 
-My analysis will utilize the DeSEQ2 package and follow this vignette - http://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html. I will use the TCGA-LIHC cohort which contains more than 200 cases. For my study, I will randomly select 40 cases and perform my analysis on those. 
+My analysis will utilize the DeSEQ2 package and follow this vignette - http://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html.
 
 ## Data
-I will use the data from [https://portal.gdc.cancer.gov/repository](https://portal.gdc.cancer.gov/repository). 
+I will use the data from [https://portal.gdc.cancer.gov/repository](https://portal.gdc.cancer.gov/repository). I will use the TCGA-LIHC cohort which contains more than 200 cases. For my study, I will randomly select 40 cases and perform my analysis on those. 
 
 ## Milestone 1
 I will create a dataframe for my analysis by extracting useful data from multiple case and clinical files. This will be completed by November 22, 2022 - end of day. 
