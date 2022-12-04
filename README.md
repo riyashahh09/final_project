@@ -40,4 +40,19 @@ library(name_of_library)
 
 A few important libraries include DESeq2, IHW, vsn, ggplot2, pheatmeap, and RColorBrewer. 
 
+**Results**
+**MA Plot 
+
+~~~ R plotMA(res, ylim=c(-10,10)) ~~~
+<img width="889" alt="plotMA(res, ylim=c(-10,10))" src="https://user-images.githubusercontent.com/112148797/205472927-6f2f9ad8-44d3-4141-ac7f-6a8c96c95e9d.png">
+
+**Plot Counts** 
+To analyze the counts per reads for a single gene across the groups, we use plot counts.
+~~~ R plotCounts(dds, gene=which.min(res$padj), intgroup="treatment_or_therapy") ~~~
+
+
+<img width="243" alt="Screenshot 2022-12-03 at 7 35 42 PM" src="https://user-images.githubusercontent.com/112148797/205473016-ceea02bb-38fd-48e2-8709-b0a7693ba9d7.png">
+
+The returnData argument only returns a data.frame for plotting with ggplot.
+<img width="881" alt="Screen Shot 2022-12-02 at 11 46 26 PM" src="https://user-images.githubusercontent.com/112148797/205473081-52cea3f3-9472-40d0-baef-70f41abc9989.png">
 
