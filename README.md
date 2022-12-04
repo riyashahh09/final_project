@@ -62,7 +62,7 @@ BiocManager::install("name_of_library")
 ```
 Once we have installed all libraries, we can load them using the following command. 
 ```R 
-library(name_of_library)
+library("name_of_library")
 ```
 A few important libraries include DESeq2, IHW, vsn, ggplot2, pheatmeap, and RColorBrewer. 
 
@@ -72,7 +72,7 @@ We can make the DESeq2 dataset using the code below.
 
 ```R
 coldata[coldata=="Not"] <- "No"
-coldata$condition <- factor(coldata$treatment_or_therapy)
+coldata$treatment_or_therapy <- factor(coldata$treatment_or_therapy)
 
 dds <- DESeqDataSetFromMatrix(countData = cts,
                               colData = coldata,
@@ -111,6 +111,18 @@ plotMA(res, ylim=c(-10,10))
 ```
 
 <img width="889" alt="plotMA(res, ylim=c(-10,10))" src="https://user-images.githubusercontent.com/112148797/205472927-6f2f9ad8-44d3-4141-ac7f-6a8c96c95e9d.png">
+
+**Alternate shrinkage methods**
+
+```R
+plotMA(resNorm, xlim=xlim, ylim=ylim, main="normal")
+```
+
+I used the following command to produce a graph which took significantly less time to run using the data shrink method ashr. It has been compared to the normal graph. 
+
+```R
+plotMA(resAsh, xlim=xlim, ylim=ylim, main="ashr")
+```
 
 <img width="476" alt="Screenshot 2022-12-03 at 10 38 43 PM" src="https://user-images.githubusercontent.com/112148797/205478063-b89eac1a-0c70-444e-bd8b-c64e6723632c.png">
 
