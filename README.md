@@ -27,4 +27,17 @@ Then I ran a first analysis of my previosuly loaded dataset. I was able to gener
 Known Issues: Loading the dataframe in to the matrix was most difficult. This was becuse the vignette had very strict and specific rules for the file that it would process. While running my vignette, one of the commands was returning a FALSE when it should have returned TRUE. It took me some time to figure out that there was 1 extra case in my genes_per_file.csv than in my clinical_processed.csv. This was because I had selected against "not reported" in my clinical file but forgot to remove that case file from my folder Case Files.  
 
 ## Deliverable
-My final project which is due on December 3, 2022 - end of day - will include a complete repository with clear documentation and description of my analysis and results.
+Loading the Libraries and our Dataset:
+Before we can run the vignette on our data, we will have to load our libraries that will help us perform the DESeq2 Analysis and our Dataset. 
+To install any package for DESeq2 Analysis, we can use the following command. 
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("name_of_library")
+
+Once we have installed all libraries, we can load them using the following command. 
+library(name_of_library)
+
+A few important libraries include DESeq2, IHW, vsn, ggplot2, pheatmeap, and RColorBrewer. 
+
+
